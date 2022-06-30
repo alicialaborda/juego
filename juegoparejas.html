@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Parejas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <header>
+        <p class="texto">¡ENCUENTRA LAS PAREJAS!</p>
+    </header>
+    <script>
+        function girarTodas(){
+
+            document.getElementById('carta_1').style.visibility="hidden"
+            document.getElementById('carta_2').style.visibility="hidden"
+            document.getElementById('carta_3').style.visibility="hidden"
+            document.getElementById('carta_4').style.visibility="hidden"
+            document.getElementById('carta_5').style.visibility="hidden"
+            document.getElementById('carta_6').style.visibility="hidden"
+            document.getElementById('carta_7').style.visibility="hidden"
+            document.getElementById('carta_8').style.visibility="hidden"
+            document.getElementById('carta_9').style.visibility="hidden"
+            document.getElementById('carta_10').style.visibility="hidden"
+
+        }
+        
+        var elegidos=new Array(2)
+
+        var nombres=new Array(2)
+
+        elegidos[0]=""
+        elegidos[1]=""
+
+        var indice=0
+
+        function voltear(imagen,nombre){ 
+
+         if(indice<2){
+
+             alert(nombre)
+            document.images[imagen].style.visibility="visible"
+           
+                     elegidos[indice]=imagen
+                     nombres[indice]=nombre
+                     indice ++
+        
+
+			        if(indice==2)
+			        {
+
+			        	if (nombres[0]==nombres[1])
+			        	{
+			        		alert("¡Bien!")
+			        		indice=0
+
+
+			        	}else{
+			        		 document.images[elegidos[0]].style.visibility="hidden"
+			        		 document.images[elegidos[1]].style.visibility="hidden"
+			        		 indice=0
+
+			          }
+                   }
+
+    }else{
+            alert('los dos que tienes son: '+ elegidos[0] + "-" + elegidos[1])
+        } 
+}//CERRAR FUNCIÓN
+ </script>
+
+</head>
+
+<body>
+    <section>
+    <script>
+        setTimeout('girarTodas()',2000)
+    </script>
+    <br>
+    <br>
+    <center>
+    <table>
+        <tr>
+            <td onclick="voltear(0,'Ted')"><img src="images/Ted.jpg" id="carta_1"  > </td>
+            <td onclick="voltear(1,'Marshall')"><img src="images/Marshall.jpg"  id="carta_2"  > </td>
+            <td onclick="voltear(2,'Robin')"><img src="images/Robin.jpg" id="carta_3"> </td>
+            <td onclick="voltear(3,'Lily')"><img src="images/Lily.jpg" id="carta_4" > </td>
+            <td onclick="voltear(4,'Barney')"><img src="images/Barney.jpg" id="carta_5" > </td>
+        </tr>
+        <tr>
+            <td onclick="voltear(5,'Lily')"><img src="images/Lily.jpg" id="carta_6" > </td>
+            <td onclick="voltear(6,'Barney')"><img src="images/Barney.jpg" id="carta_7" > </td>
+            <td onclick="voltear(7,'Ted')"><img src="images/Ted.jpg" id="carta_8"  > </td>
+            <td onclick="voltear(8,'Marshall')"><img src="images/Marshall.jpg"  id="carta_9"  > </td>
+            <td onclick="voltear(9,'Robin')"><img src="images/Robin.jpg" id="carta_10"> </td>
+        </tr>
+      
+    </table>
+</center>
+</section>
+<footer>
+    <p class="copy"><small>Copyright &copy; 2022 Alicia Laborda</small></p>
+</footer>
+</body>
+</html>

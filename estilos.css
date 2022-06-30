@@ -1,0 +1,61 @@
+
+/*ajustes navegación*/
+header{
+    background: white; 
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    position:fixed;
+    
+}
+section{
+    background-color: white;
+    width: 100%;
+    margin-top: 80px;
+    
+}
+img{
+    width: 300px;
+}
+
+button {
+    background-color: darkviolet;
+}
+table{
+position: relative;
+padding-top: 3em;
+padding-bottom: 5em;
+}
+
+td{
+    background-image: url(images/Carta.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+}
+img{
+    background-size: cover;
+}
+
+#footer{
+    background-color:white;
+    height: 100px;
+    width: 100%;
+    padding: 10px,30px,10px,30px;
+}
+.copy{
+    text-align:center;
+    line-height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+ }
+ .texto{
+    text-align:center;
+    line-height: 80px;
+    font-family: helvetica;
+    color:red;
+    font-weight: bolder;
+    font-size: 20pt;
+    line-height: 80px;
+ }
